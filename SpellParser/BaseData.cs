@@ -157,49 +157,6 @@ namespace SpellParser
                         Name = name,
                         DurationTicks = durationTicks
                     });
-                    Console.WriteLine(spellID + " - " + name);
-
-                    if (spaField[165].Contains('$'))
-                    {
-                        var spaSlotSplit = spaField[165].Split("$");
-                        foreach (var spas in spaSlotSplit)
-                        {
-                            var spaSlots = spas.Split("|");
-                            if (ulong.Parse(spaSlots[1]) is 83 or 88 or 104 or 145 or 146)
-                            {
-                                Globals.spellSlotData.Add(new SpellSlots()
-                                {
-                                    ID = spellID,
-                                    Slot = ulong.Parse(spaSlots[0]),
-                                    SPA = ulong.Parse(spaSlots[1]),
-                                    Base1 = double.Parse(spaSlots[2]),
-                                    Base2 = double.Parse(spaSlots[3]),
-                                    Calc = double.Parse(spaSlots[4]),
-                                    Max = double.Parse(spaSlots[5])
-                                });
-
-                                Console.WriteLine(spellID + " - " + ulong.Parse(spaSlots[0]));
-                            }
-                        }
-                    }
-                    else if (!string.IsNullOrEmpty(spaField[165]))
-                    {
-                        var spaSlots = spaField[165].Split("|");
-                        if (ulong.Parse(spaSlots[1]) is 83 or 88 or 104 or 145 or 146)
-                        {
-                            Globals.spellSlotData.Add(new SpellSlots()
-                            {
-                                ID = spellID,
-                                Slot = ulong.Parse(spaSlots[0]),
-                                SPA = ulong.Parse(spaSlots[1]),
-                                Base1 = double.Parse(spaSlots[2]),
-                                Base2 = double.Parse(spaSlots[3]),
-                                Calc = double.Parse(spaSlots[4]),
-                                Max = double.Parse(spaSlots[5])
-                            });
-                            Console.WriteLine(spellID + " - " + ulong.Parse(spaSlots[0]));
-                        }
-                    }
 
                 }
             }

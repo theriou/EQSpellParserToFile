@@ -20,7 +20,7 @@
 
         public static string FormatCountRange(string name, double value, double startValue, double endValue)
         {
-            return String.Format("{0} {1} by {2} to {3}", value < 0 ? "Decrease" : "Increase", name, startValue, endValue);
+            return string.Format("{0} {1} by {2} to {3}", value < 0 ? "Decrease" : "Increase", name, startValue, endValue);
         }
 
         public static string FormatPercent(string name, double value)

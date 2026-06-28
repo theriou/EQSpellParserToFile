@@ -21,6 +21,13 @@
             public double Max { get; set; }
         }
 
+        public class SpellSlotData
+        {
+            public ulong ID { get; set; }
+            public ulong Slot { get; set; }
+            public string? ParsedData { get; set; }
+        }
+
         public class SpellBaseData
         {
             public ulong ID { get; set; }

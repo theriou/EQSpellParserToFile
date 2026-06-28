@@ -1463,7 +1463,7 @@
                     finalIllusion = "Gifty Giver Goblin";
                     break;
                 default:
-                    finalIllusion = "UNKNOWN finalIllusion " + base1;
+                    finalIllusion = "UNKNOWN Illusion " + base1;
                     break;
             }
 

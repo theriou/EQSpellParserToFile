@@ -4,11 +4,11 @@ namespace SpellParser
 {
     internal class SpellDBFiles
     {
-        public static List<ItemData> ParseItems()
+        public static List<ItemData> ParseItems(string itemFile)
         {
             List<ItemData> parsedItems = new();
 
-            var parseItemFile = File.ReadAllLines("itemlist.txt");
+            var parseItemFile = File.ReadAllLines(itemFile);
             for (int i = 0; i < parseItemFile.Length; i++)
             {
                 var itemField = parseItemFile[i].Split("^");

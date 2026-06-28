@@ -1,45 +1,53 @@
 ﻿using SpellParser;
-using static SpellParser.ParseSPA;
 
-string loadData = Globals.LoadData;
-string dbstrFile = String.Empty,
-    dbstrSource = String.Empty,
-    spellsFile = String.Empty,
-    spellsSource = String.Empty,
-    finalString = string.Empty;
+string dbstrFile = string.Empty,
+    dbstrSource = string.Empty,
+    spellsFile = string.Empty,
+    spellsSource = string.Empty,
+    itemFile = "data/itemlist.txt";
 
 Console.WriteLine("Choose B-Beta, L-Live, T-Test.");
 string? parseSection = Console.ReadLine();
 
 if ((parseSection == "B") ||  (parseSection == "Beta"))
 {
-    dbstrFile = "dbstr_usB.txt";
+    dbstrFile = "data/dbstr_usB.txt";
     dbstrSource = "B";
-    spellsFile = "spells_usB.txt";
+    spellsFile = "data/spells_usB.txt";
     spellsSource = "B";
 }
 else if ((parseSection == "T") || (parseSection == "Test"))
 {
-    dbstrFile = "dbstr_usT.txt";
+    dbstrFile = "data/dbstr_usT.txt";
     dbstrSource = "T";
-    spellsFile = "spells_usT.txt";
+    spellsFile = "data/spells_usT.txt";
     spellsSource = "T";
 }
 else
 {
-    dbstrFile = "dbstr_usL.txt";
+    dbstrFile = "data/dbstr_usL.txt";
     dbstrSource = "L";
-    spellsFile = "spells_usL.txt";
+    spellsFile = "data/spells_usL.txt";
     spellsSource = "L";
 }
 if ((File.Exists(dbstrFile)) && (File.Exists(spellsFile)))
 {
     Globals.dbstrData = SpellDBFiles.DbstrData(dbstrFile);
+    Globals.parsedItems = SpellDBFiles.ParseItems(itemFile);
+
     Globals.spellBaseData = BaseData.SpellBaseData(spellsFile);
+    Globals.spellSlotData = ParseSPA.ParseSPAs(spellsFile);
 
-    finalString += ParseSPAs(spellsFile);
+    foreach (var baseData in Globals.spellBaseData)
+    {
+        Console.WriteLine($"ID: {baseData.ID} - Name: {baseData.Name}");
+    }
 
-    Console.WriteLine(finalString);
+    foreach (var slotData in Globals.spellSlotData)
+    {
+        Console.WriteLine($"ID: {slotData.ID} - Slot: {slotData.Slot} - Data: {slotData.ParsedData}");
+    }
+    
 
     Console.WriteLine($"Spell Source: {spellsSource} - DBStr Source: {dbstrSource}");
 }
