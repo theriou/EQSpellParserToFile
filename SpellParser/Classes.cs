@@ -33,6 +33,7 @@
             public ulong ID { get; set; }
             public string? Name { get; set; }
             public double DurationTicks { get; set; }
+            public double GroupID { get; set; }
         }
 
         public class ItemData

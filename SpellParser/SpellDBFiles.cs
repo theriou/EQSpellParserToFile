@@ -35,7 +35,7 @@ namespace SpellParser
                 for (int i = 0; i < parseDbstr.Length; i++)
                 {
                     var dbstrFields = parseDbstr[i].Split("^");
-                    if (ulong.Parse(dbstrFields[1]) is 5 or 6 or 45)
+                    if (ulong.Parse(dbstrFields[1]) is 5 or 6 or 27 or 45)
                     {
                         dbstrData.Add(new DbstrList()
                         {

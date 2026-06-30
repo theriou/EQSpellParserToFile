@@ -40,12 +40,12 @@ if ((File.Exists(dbstrFile)) && (File.Exists(spellsFile)))
 
     foreach (var baseData in Globals.spellBaseData)
     {
-        Console.WriteLine($"ID: {baseData.ID} - Name: {baseData.Name}");
+        //Console.WriteLine($"ID: {baseData.ID} - Name: {baseData.Name}");
     }
 
     foreach (var slotData in Globals.spellSlotData)
     {
-        Console.WriteLine($"ID: {slotData.ID} - Slot: {slotData.Slot} - Data: {slotData.ParsedData}");
+        //Console.WriteLine($"ID: {slotData.ID} - Slot: {slotData.Slot} - Data: {slotData.ParsedData}");
     }
     
 

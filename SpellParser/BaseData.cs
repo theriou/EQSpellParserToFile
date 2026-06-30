@@ -153,9 +153,10 @@ namespace SpellParser
 
                     spellBaseData.Add(new SpellBaseData()
                     {
-                        ID = spellID,
-                        Name = name,
-                        DurationTicks = durationTicks
+                        ID = spellID, //0
+                        Name = name, //1
+                        DurationTicks = durationTicks, //11
+                        GroupID = groupId //132
                     });
 
                 }

@@ -4,1470 +4,1011 @@
     {
         public static string SpellIllusion(double base1, double base2, double max)
         {
-            string finalIllusion = string.Empty;
 
             switch (base1)
             {
                 case -1:
-                    if (max == 1) { finalIllusion = "Male"; }
-                    else if (max == 2) { finalIllusion = "Female"; }
-                    else { finalIllusion = "Swap Gender"; }
-                    break;
+                    if (max == 1) { return "Male"; }
+                    else if (max == 2) { return "Female"; }
+                    else { return "Swap Gender"; }
                 case 1:
-                    finalIllusion = "Human";
-                    break;
+                    return "Human";
                 case 2:
-                    finalIllusion = "Barbarian";
-                    break;
+                    return "Barbarian";
                 case 3:
-                    finalIllusion = "Erudite";
-                    break;
+                    return "Erudite";
                 case 4:
-                    finalIllusion = "Wood Elf";
-                    break;
+                    return "Wood Elf";
                 case 5:
-                    finalIllusion = "High Elf";
-                    break;
+                    return "High Elf";
                 case 6:
-                    finalIllusion = "Dark Elf";
-                    break;
+                    return "Dark Elf";
                 case 7:
-                    finalIllusion = "Half Elf";
-                    break;
+                    return "Half Elf";
                 case 8:
-                    finalIllusion = "Dwarf";
-                    break;
+                    return "Dwarf";
                 case 9:
-                    finalIllusion = "Troll";
-                    break;
+                    return "Troll";
                 case 10:
-                    finalIllusion = "Ogre";
-                    break;
+                    return "Ogre";
                 case 11:
-                    finalIllusion = "Halfling";
-                    break;
+                    return "Halfling";
                 case 12:
-                    finalIllusion = "Gnome";
-                    break;
+                    return "Gnome";
                 case 13:
-                    finalIllusion = "Old Aviak";
-                    break;
+                    return "Old Aviak";
                 case 14:
-                    finalIllusion = "Old Werewolf";
-                    break;
+                    return "Old Werewolf";
                 case 15:
-                    finalIllusion = "Old Brownie";
-                    break;
+                    return "Old Brownie";
                 case 16:
-                    finalIllusion = "Old Centaur";
-                    break;
+                    return "Old Centaur";
                 case 18:
-                    finalIllusion = "Ice Giant";
-                    break;
+                    return "Ice Giant";
                 case 19:
-                    finalIllusion = "Trakanon";
-                    break;
+                    return "Trakanon";
                 case 20:
-                    finalIllusion = "Venril Sathir";
-                    break;
+                    return "Venril Sathir";
                 case 21:
-                    finalIllusion = "Old Evil Eye";
-                    break;
+                    return "Old Evil Eye";
                 case 22:
-                    finalIllusion = "Old Beetle";
-                    break;
+                    return "Old Beetle";
                 case 23:
-                    finalIllusion = "Kerran";
-                    break;
+                    return "Kerran";
                 case 24:
-                    finalIllusion = "Fish";
-                    break;
+                    return "Fish";
                 case 25:
-                    finalIllusion = "Old Fairy";
-                    break;
+                    return "Old Fairy";
                 case 27:
-                    finalIllusion = "Froglok";
-                    break;
+                    return "Froglok";
                 case 28:
-                    finalIllusion = "Fungusman";
-                    break;
+                    return "Fungusman";
                 case 29:
-                    finalIllusion = "Old Gargoyle";
-                    break;
+                    return "Old Gargoyle";
                 case 31:
-                    finalIllusion = "Gelatinous Cube";
-                    break;
+                    return "Gelatinous Cube";
                 case 33:
-                    finalIllusion = "Ghoul";
-                    break;
+                    return "Ghoul";
                 case 36:
-                    if (base2 == 2) { finalIllusion = "Infected Rat"; }
-                    else { finalIllusion = "Rat"; }
-                    break;
+                    if (base2 == 2) { return "Infected Rat"; }
+                    else { return "Rat"; }
                 case 38:
-                    if (base2 == 2) { finalIllusion = "Jungle Spider"; }
-                    else { finalIllusion = "Spider"; }
-                    break;
+                    if (base2 == 2) { return "Jungle Spider"; }
+                    else { return "Spider"; }
                 case 39:
-                    finalIllusion = "Old Gnoll";
-                    break;
+                    return "Old Gnoll";
                 case 40:
-                    finalIllusion = "Old Goblin";
-                    break;
+                    return "Old Goblin";
                 case 42:
-                    if (base2 == 1) { finalIllusion = "Black Spirit Wolf"; }
-                    else if (base2 == 2) { finalIllusion = "White Spirit Wolf"; }
-                    else { finalIllusion = "Old Wolf"; }
-                    break;
+                    if (base2 == 1) { return "Black Spirit Wolf"; }
+                    else if (base2 == 2) { return "White Spirit Wolf"; }
+                    else { return "Old Wolf"; }
                 case 43:
-                    if (base2 == 0) { finalIllusion = "Old Bear"; }
-                    else if (base2 == 2) { finalIllusion = "Polar Bear"; }
-                    else { finalIllusion = "Bear"; }
-                    break;
+                    if (base2 == 0) { return "Old Bear"; }
+                    else if (base2 == 2) { return "Polar Bear"; }
+                    else { return "Bear"; }
                 case 44:
-                    finalIllusion = "Freeport Militia";
-                    break;
+                    return "Freeport Militia";
                 case 46:
-                    finalIllusion = "Imp";
-                    break;
+                    return "Imp";
                 case 48:
-                    finalIllusion = "Kobold";
-                    break;
+                    return "Kobold";
                 case 51:
-                    finalIllusion = "Lizard Man";
-                    break;
+                    return "Lizard Man";
                 case 52:
-                    finalIllusion = "Mimic";
-                    break;
+                    return "Mimic";
                 case 54:
-                    finalIllusion = "Old Orc";
-                    break;
+                    return "Old Orc";
                 case 56:
-                    finalIllusion = "Pixie";
-                    break;
+                    return "Pixie";
                 case 57:
-                    finalIllusion = "Old Drachnid";
-                    break;
+                    return "Old Drachnid";
                 case 58:
-                    finalIllusion = "Solusek Ro";
-                    break;
+                    return "Solusek Ro";
                 case 62:
-                    finalIllusion = "Tunare";
-                    break;
+                    return "Tunare";
                 case 63:
-                    finalIllusion = "Tiger";
-                    break;
+                    return "Tiger";
                 case 65:
-                    finalIllusion = "Mayong";
-                    break;
+                    return "Mayong";
                 case 66:
-                    finalIllusion = "Rallos Zek";
-                    break;
+                    return "Rallos Zek";
                 case 68:
-                    finalIllusion = "Tentacle Terror";
-                    break;
+                    return "Tentacle Terror";
                 case 69:
-                    finalIllusion = "Will-O-Wisp";
-                    break;
+                    return "Will-O-Wisp";
                 case 70:
-                    if (base2 == 0) { finalIllusion = "Female Zombie"; }
-                    else if (base2 == 1) { finalIllusion = "Mummy Zombie"; }
-                    else { finalIllusion = "Zombie"; }
-                    break;
+                    if (base2 == 0) { return "Female Zombie"; }
+                    else if (base2 == 1) { return "Mummy Zombie"; }
+                    else { return "Zombie"; }
                 case 74:
-                    finalIllusion = "Piranha";
-                    break;
+                    return "Piranha";
                 case 75:
-                    if (base2 == 0) { finalIllusion = "Earth Elemental"; }
-                    else if (base2 == 1) { finalIllusion = "Fire Elemental"; }
-                    else if (base2 == 2) { finalIllusion = "Water Elemental"; }
-                    else if (base2 == 3) { finalIllusion = "Air Elemental"; }
-                    else { finalIllusion = "Elemental"; }
-                    break;
+                    if (base2 == 0) { return "Earth Elemental"; }
+                    else if (base2 == 1) { return "Fire Elemental"; }
+                    else if (base2 == 2) { return "Water Elemental"; }
+                    else if (base2 == 3) { return "Air Elemental"; }
+                    else { return "Elemental"; }
                 case 76:
-                    if (base2 == 1) { finalIllusion = "Snow Leopard"; }
-                    else { finalIllusion = "Puma"; }
-                    break;
+                    if (base2 == 1) { return "Snow Leopard"; }
+                    else { return "Puma"; }
                 case 80:
-                    finalIllusion = "Reanimated Hand";
-                    break;
+                    return "Reanimated Hand";
                 case 81:
-                    finalIllusion = "Rivervale Guard";
-                    break;
+                    return "Rivervale Guard";
                 case 82:
-                    finalIllusion = "Old Scarecrow";
-                    break;
+                    return "Old Scarecrow";
                 case 83:
-                    finalIllusion = "Skunk";
-                    break;
+                    return "Skunk";
                 case 85:
-                    finalIllusion = "Old Skeleton";
-                    break;
+                    return "Old Skeleton";
                 case 87:
-                    finalIllusion = "Armadillo";
-                    break;
+                    return "Armadillo";
                 case 89:
-                    finalIllusion = "Old Drake";
-                    break;
+                    return "Old Drake";
                 case 91:
-                    finalIllusion = "Old Alligator";
-                    break;
+                    return "Old Alligator";
                 case 94:
-                    finalIllusion = "Kaladim Guard";
-                    break;
+                    return "Kaladim Guard";
                 case 95:
-                    finalIllusion = "Old Cazic-Thule";
-                    break;
+                    return "Old Cazic-Thule";
                 case 96:
-                    finalIllusion = "Cockatrice";
-                    break;
+                    return "Cockatrice";
                 case 98:
-                    finalIllusion = "Old Vampire";
-                    break;
+                    return "Old Vampire";
                 case 99:
-                    finalIllusion = "Old Amygdalan";
-                    break;
+                    return "Old Amygdalan";
                 case 100:
-                    finalIllusion = "Old Dervish";
-                    break;
+                    return "Old Dervish";
                 case 102:
-                    finalIllusion = "Tadpole";
-                    break;
+                    return "Tadpole";
                 case 103:
-                    finalIllusion = "Old Kedge";
-                    break;
+                    return "Old Kedge";
                 case 107:
-                    finalIllusion = "Mammoth";
-                    break;
+                    return "Mammoth";
                 case 109:
-                    finalIllusion = "Wasp";
-                    break;
+                    return "Wasp";
                 case 110:
-                    finalIllusion = "Mermaid";
-                    break;
+                    return "Mermaid";
                 case 113:
-                    finalIllusion = "Drixie";
-                    break;
+                    return "Drixie";
                 case 116:
-                    finalIllusion = "Seahorse";
-                    break;
+                    return "Seahorse";
                 case 118:
-                    finalIllusion = "Ghost";
-                    break;
+                    return "Ghost";
                 case 119:
-                    finalIllusion = "Sabertooth";
-                    break;
+                    return "Sabertooth";
                 case 120:
-                    finalIllusion = "Spirit Wolf";
-                    break;
+                    return "Spirit Wolf";
                 case 121:
-                    finalIllusion = "Gorgon";
-                    break;
+                    return "Gorgon";
                 case 122:
-                    finalIllusion = "Old Dragon";
-                    break;
+                    return "Old Dragon";
                 case 123:
-                    finalIllusion = "Innoruuk";
-                    break;
+                    return "Innoruuk";
                 case 124:
-                    finalIllusion = "Unicorn";
-                    break;
+                    return "Unicorn";
                 case 125:
-                    finalIllusion = "Pegasus";
-                    break;
+                    return "Pegasus";
                 case 126:
-                    finalIllusion = "Djinn";
-                    break;
+                    return "Djinn";
                 case 127:
-                    finalIllusion = "Invisible Man";
-                    break;
+                    return "Invisible Man";
                 case 128:
-                    finalIllusion = "Iksar";
-                    break;
+                    return "Iksar";
                 case 129:
-                    finalIllusion = "Scorpion";
-                    break;
+                    return "Scorpion";
                 case 130:
-                    finalIllusion = "Vah Shir";
-                    break;
+                    return "Vah Shir";
                 case 131:
-                    finalIllusion = "Old Sarnak";
-                    break;
+                    return "Old Sarnak";
                 case 133:
-                    finalIllusion = "Old Drolvarg";
-                    break;
+                    return "Old Drolvarg";
                 case 134:
-                    finalIllusion = "Mosquito";
-                    break;
+                    return "Mosquito";
                 case 135:
-                    finalIllusion = "Rhinoceros";
-                    break;
+                    return "Rhinoceros";
                 case 136:
-                    finalIllusion = "Xalgoz";
-                    break;
+                    return "Xalgoz";
                 case 137:
-                    finalIllusion = "Kunark Goblin";
-                    break;
+                    return "Kunark Goblin";
                 case 138:
-                    finalIllusion = "Yeti";
-                    break;
+                    return "Yeti";
                 case 139:
-                    finalIllusion = "Iksar2";
-                    break;
+                    return "Iksar2";
                 case 140:
-                    finalIllusion = "Kunark Giant";
-                    break;
+                    return "Kunark Giant";
                 case 142:
-                    finalIllusion = "Nearby Object";
-                    break;
+                    return "Nearby Object";
                 case 143:
-                    finalIllusion = "Tree";
-                    break;
+                    return "Tree";
                 case 145:
-                    finalIllusion = "Goo";
-                    break;
+                    return "Goo";
                 case 150:
-                    finalIllusion = "Erollisi Marr";
-                    break;
+                    return "Erollisi Marr";
                 case 151:
-                    finalIllusion = "Tribunal";
-                    break;
+                    return "Tribunal";
                 case 153:
-                    finalIllusion = "Bristlebane";
-                    break;
+                    return "Bristlebane";
                 case 155:
-                    finalIllusion = "Sarnak Skeleton";
-                    break;
+                    return "Sarnak Skeleton";
                 case 156:
-                    finalIllusion = "Ratman";
-                    break;
+                    return "Ratman";
                 case 161:
-                    finalIllusion = "Old Iksar Skeleton";
-                    break;
+                    return "Old Iksar Skeleton";
                 case 162:
-                    finalIllusion = "Man-Eating Plant";
-                    break;
+                    return "Man-Eating Plant";
                 case 163:
-                    finalIllusion = "Old Raptor";
-                    break;
+                    return "Old Raptor";
                 case 175:
-                    finalIllusion = "Enchanted Armor";
-                    break;
+                    return "Enchanted Armor";
                 case 176:
-                    finalIllusion = "Snow Rabbit";
-                    break;
+                    return "Snow Rabbit";
                 case 177:
-                    finalIllusion = "Walrus";
-                    break;
+                    return "Walrus";
                 case 178:
-                    finalIllusion = "Geonid";
-                    break;
+                    return "Geonid";
                 case 181:
-                    finalIllusion = "Tizmak";
-                    break;
+                    return "Tizmak";
                 case 183:
-                    if (base2 == 2) { finalIllusion = "Coldain Citizen"; }
-                    else { finalIllusion = "Coldain"; }
-                    break;
+                    if (base2 == 2) { return "Coldain Citizen"; }
+                    else { return "Coldain"; }
                 case 185:
-                    finalIllusion = "Hag";
-                    break;
+                    return "Hag";
                 case 190:
-                    finalIllusion = "Othmir";
-                    break;
+                    return "Othmir";
                 case 191:
-                    finalIllusion = "Ulthork";
-                    break;
+                    return "Ulthork";
                 case 194:
-                    finalIllusion = "Sea Turtle";
-                    break;
+                    return "Sea Turtle";
                 case 199:
-                    finalIllusion = "Shik`Nar";
-                    break;
+                    return "Shik`Nar";
                 case 200:
-                    finalIllusion = "Rockhopper";
-                    break;
+                    return "Rockhopper";
                 case 201:
-                    finalIllusion = "Underbulk";
-                    break;
+                    return "Underbulk";
                 case 202:
-                    finalIllusion = "Grimling";
-                    break;
+                    return "Grimling";
                 case 203:
-                    finalIllusion = "Worm";
-                    break;
+                    return "Worm";
                 case 205:
-                    finalIllusion = "Shadel";
-                    break;
+                    return "Shadel";
                 case 206:
-                    finalIllusion = "Owlbear";
-                    break;
+                    return "Owlbear";
                 case 207:
-                    finalIllusion = "Rhino Beetle";
-                    break;
+                    return "Rhino Beetle";
                 case 209:
-                    finalIllusion = "Earth Elemental2";
-                    break;
+                    return "Earth Elemental2";
                 case 210:
-                    finalIllusion = "Air Elemental2";
-                    break;
+                    return "Air Elemental2";
                 case 211:
-                    finalIllusion = "Water Elemental2";
-                    break;
+                    return "Water Elemental2";
                 case 212:
-                    finalIllusion = "Fire Elemental2";
-                    break;
+                    return "Fire Elemental2";
                 case 214:
-                    finalIllusion = "Thought Horror";
-                    break;
+                    return "Thought Horror";
                 case 217:
-                    finalIllusion = "Shissar";
-                    break;
+                    return "Shissar";
                 case 218:
-                    finalIllusion = "Fungal Fiend";
-                    break;
+                    return "Fungal Fiend";
                 case 220:
-                    finalIllusion = "Stonegrabber";
-                    break;
+                    return "Stonegrabber";
                 case 221:
-                    finalIllusion = "Scarlet Cheetah";
-                    break;
+                    return "Scarlet Cheetah";
                 case 222:
-                    finalIllusion = "Zelniak";
-                    break;
+                    return "Zelniak";
                 case 223:
-                    finalIllusion = "Lightcrawler";
-                    break;
+                    return "Lightcrawler";
                 case 224:
-                    finalIllusion = "Shadow";
-                    break;
+                    return "Shadow";
                 case 225:
-                    finalIllusion = "Sunflower";
-                    break;
+                    return "Sunflower";
                 case 226:
-                    finalIllusion = "Sun Revenant";
-                    break;
+                    return "Sun Revenant";
                 case 227:
-                    finalIllusion = "Shrieker";
-                    break;
+                    return "Shrieker";
                 case 228:
-                    finalIllusion = "Galorian";
-                    break;
+                    return "Galorian";
                 case 229:
-                    finalIllusion = "Netherbian";
-                    break;
+                    return "Netherbian";
                 case 230:
-                    finalIllusion = "Akheva";
-                    break;
+                    return "Akheva";
                 case 232:
-                    finalIllusion = "Sonic Wolf";
-                    break;
+                    return "Sonic Wolf";
                 case 235:
-                    finalIllusion = "Wretch";
-                    break;
+                    return "Wretch";
                 case 239:
-                    finalIllusion = "Guard";
-                    break;
+                    return "Guard";
                 case 261:
-                    finalIllusion = "Hraquis";
-                    break;
+                    return "Hraquis";
                 case 266:
-                    finalIllusion = "Knight of Pestilence";
-                    break;
+                    return "Knight of Pestilence";
                 case 267:
-                    finalIllusion = "Lepertoloth";
-                    break;
+                    return "Lepertoloth";
                 case 279:
-                    finalIllusion = "Blood Raven";
-                    break;
+                    return "Blood Raven";
                 case 280:
-                    finalIllusion = "Nightmare Gargoyle";
-                    break;
+                    return "Nightmare Gargoyle";
                 case 285:
-                    if (base2 == 1) { finalIllusion = "Boar Beast"; }
-                    else { finalIllusion = "Tormentor"; }
-                    break;
+                    if (base2 == 1) { return "Boar Beast"; }
+                    else { return "Tormentor"; }
                 case 303:
-                    finalIllusion = "Phoenix";
-                    break;
+                    return "Phoenix";
                 case 314:
-                    finalIllusion = "Wrulon";
-                    break;
+                    return "Wrulon";
                 case 316:
-                    finalIllusion = "Poison Frog";
-                    break;
+                    return "Poison Frog";
                 case 319:
-                    finalIllusion = "War Boar";
-                    break;
+                    return "War Boar";
                 case 323:
-                    finalIllusion = "Animated Armor";
-                    break;
+                    return "Animated Armor";
                 case 326:
-                    finalIllusion = "Arachnid";
-                    break;
+                    return "Arachnid";
                 case 330:
-                    finalIllusion = "Guktan";
-                    break;
+                    return "Guktan";
                 case 331:
-                    if (max == 0) { finalIllusion = "Troll Pirate"; }
-                    else if (max == 1) { finalIllusion = "Male Troll Pirate"; }
-                    else if (max == 2) { finalIllusion = "Female Troll Pirate"; }
-                    break;
+                    if (max == 1) { return "Male Troll Pirate"; }
+                    else if (max == 2) { return "Female Troll Pirate"; }
+                    else { return "Troll Pirate"; }
                 case 338:
-                    if (max == 0) { finalIllusion = "Gnome Pirate"; }
-                    else if (max == 1) { finalIllusion = "Male Gnome Pirate"; }
-                    else if (max == 2) { finalIllusion = "Female Gnome Pirate"; }
-                    break;
+                    if (max == 1) { return "Male Gnome Pirate"; }
+                    else if (max == 2) { return "Female Gnome Pirate"; }
+                    else { return "Gnome Pirate"; }
                 case 339:
-                    if (max == 0) { finalIllusion = "Dark Elf Pirate"; }
-                    else if (max == 1) { finalIllusion = "Male Dark Elf Pirate"; }
-                    else if (max == 2) { finalIllusion = "Female Dark Elf Pirate"; }
-                    break;
+                    if (max == 1) { return "Male Dark Elf Pirate"; }
+                    else if (max == 2) { return "Female Dark Elf Pirate"; }
+                    else { return "Dark Elf Pirate"; }
                 case 340:
-                    if (max == 0) { finalIllusion = "Ogre Pirate"; }
-                    else if (max == 1) { finalIllusion = "Male Ogre Pirate"; }
-                    else if (max == 2) { finalIllusion = "Female Ogre Pirate"; }
-                    break;
+
+                    if (max == 1) { return "Male Ogre Pirate"; }
+                    else if (max == 2) { return "Female Ogre Pirate"; }
+                    else { return "Ogre Pirate"; }
                 case 341:
-                    if (max == 0) { finalIllusion = "Human Pirate"; }
-                    else if (max == 1) { finalIllusion = "Male Human Pirate"; }
-                    else if (max == 2) { finalIllusion = "Female Human Pirate"; }
-                    break;
+
+                    if (max == 1) { return "Male Human Pirate"; }
+                    else if (max == 2) { return "Female Human Pirate"; }
+                    else { return "Human Pirate"; }
                 case 342:
-                    if (max == 0) { finalIllusion = "Erudite Pirate"; }
-                    else if (max == 1) { finalIllusion = "Male Erudite Pirate"; }
-                    else if (max == 2) { finalIllusion = "Female Erudite Pirate"; }
-                    break;
+                    if (max == 1) { return "Male Erudite Pirate"; }
+                    else if (max == 2) { return "Female Erudite Pirate"; }
+                    else { return "Erudite Pirate"; }
                 case 344:
-                    finalIllusion = "Troll Zombie";
-                    break;
+                    return "Troll Zombie";
                 case 349:
-                    finalIllusion = "Froglok Skeleton";
-                    break;
+                    return "Froglok Skeleton";
                 case 350:
-                    finalIllusion = "Undead Froglok";
-                    break;
+                    return "Undead Froglok";
                 case 353:
-                    finalIllusion = "Veksar";
-                    break;
+                    return "Veksar";
                 case 356:
-                    finalIllusion = "Scaled Wolf";
-                    break;
+                    return "Scaled Wolf";
                 case 360:
-                    if (base2 == 1) { finalIllusion = "Nightrage Orphan"; }
-                    else { finalIllusion = "Vampire"; }
-                    break;
+                    if (base2 == 1) { return "Nightrage Orphan"; }
+                    else { return "Vampire"; }
                 case 367:
-                    if (base2 == 0) { finalIllusion = "Skeleton"; }
-                    else if (base2 == 1) { finalIllusion = "Drybone Skeleton"; }
-                    else if (base2 == 2) { finalIllusion = "Frostbone Skeleton"; }
-                    else if (base2 == 3) { finalIllusion = "Firebone Skeleton"; }
-                    else if (base2 == 4) { finalIllusion = "Scorched Skeleton"; }
-                    else { finalIllusion = "Skeleton"; }
-                    break;
+                    if (base2 == 0) { return "Skeleton"; }
+                    else if (base2 == 1) { return "Drybone Skeleton"; }
+                    else if (base2 == 2) { return "Frostbone Skeleton"; }
+                    else if (base2 == 3) { return "Firebone Skeleton"; }
+                    else if (base2 == 4) { return "Scorched Skeleton"; }
+                    else { return "Skeleton"; }
                 case 368:
-                    finalIllusion = "Mummy";
-                    break;
+                    return "Mummy";
                 case 371:
-                    finalIllusion = "Froglok Ghost";
-                    break;
+                    return "Froglok Ghost";
                 case 373:
-                    finalIllusion = "Shade";
-                    break;
+                    return "Shade";
                 case 374:
-                    if (base2 == 0) { finalIllusion = "Golem"; }
-                    else if (base2 == 1) { finalIllusion = "Ice Golem"; }
-                    else if (base2 == 3) { finalIllusion = "Crystal Golem"; }
-                    else { finalIllusion = "Golem " + base2; }
-                    break;
+                    if (base2 == 0) { return "Golem"; }
+                    else if (base2 == 1) { return "Ice Golem"; }
+                    else if (base2 == 3) { return "Crystal Golem"; }
+                    else { return "Golem " + base2; }
                 case 384:
-                    finalIllusion = "Jokester";
-                    break;
+                    return "Jokester";
                 case 385:
-                    finalIllusion = "Nihil";
-                    break;
+                    return "Nihil";
                 case 386:
-                    finalIllusion = "Trusik";
-                    break;
+                    return "Trusik";
                 case 388:
-                    finalIllusion = "Hynid";
-                    break;
+                    return "Hynid";
                 case 389:
-                    finalIllusion = "Turepta";
-                    break;
+                    return "Turepta";
                 case 390:
-                    finalIllusion = "Cragbeast";
-                    break;
+                    return "Cragbeast";
                 case 391:
-                    finalIllusion = "Stonemite";
-                    break;
+                    return "Stonemite";
                 case 392:
-                    finalIllusion = "Ukun";
-                    break;
+                    return "Ukun";
                 case 394:
-                    finalIllusion = "Ikaav";
-                    break;
+                    return "Ikaav";
                 case 395:
-                    finalIllusion = "Aneuk";
-                    break;
+                    return "Aneuk";
                 case 396:
-                    finalIllusion = "Kyv";
-                    break;
+                    return "Kyv";
                 case 397:
-                    finalIllusion = "Noc";
-                    break;
+                    return "Noc";
                 case 398:
-                    finalIllusion = "Ra`tuk";
-                    break;
+                    return "Ra`tuk";
                 case 399:
-                    finalIllusion = "Taneth";
-                    break;
+                    return "Taneth";
                 case 400:
-                    finalIllusion = "Huvul";
-                    break;
+                    return "Huvul";
                 case 401:
-                    finalIllusion = "Mutna";
-                    break;
+                    return "Mutna";
                 case 402:
-                    finalIllusion = "Mastruq";
-                    break;
+                    return "Mastruq";
                 case 403:
-                    finalIllusion = "Taelosian";
-                    break;
+                    return "Taelosian";
                 case 405:
-                    finalIllusion = "Stone Worker";
-                    break;
+                    return "Stone Worker";
                 case 406:
-                    finalIllusion = "Mata Muram";
-                    break;
+                    return "Mata Muram";
                 case 407:
-                    finalIllusion = "Lightning Warrior";
-                    break;
+                    return "Lightning Warrior";
                 case 409:
-                    finalIllusion = "Bazu";
-                    break;
+                    return "Bazu";
                 case 410:
-                    finalIllusion = "Feran";
-                    break;
+                    return "Feran";
                 case 411:
-                    finalIllusion = "Pyrilen";
-                    break;
+                    return "Pyrilen";
                 case 412:
-                    finalIllusion = "Chimera";
-                    break;
+                    return "Chimera";
                 case 413:
-                    finalIllusion = "Dragorn";
-                    break;
+                    return "Dragorn";
                 case 414:
-                    finalIllusion = "Murkglider";
-                    break;
+                    return "Murkglider";
                 case 415:
-                    finalIllusion = "Rat";
-                    break;
+                    return "Rat";
                 case 416:
-                    finalIllusion = "Bat";
-                    break;
+                    return "Bat";
                 case 417:
-                    finalIllusion = "Gelidran";
-                    break;
+                    return "Gelidran";
                 case 419:
-                    finalIllusion = "Girplan";
-                    break;
+                    return "Girplan";
                 case 425:
-                    finalIllusion = "Crystal Shard";
-                    break;
+                    return "Crystal Shard";
                 case 430:
-                    finalIllusion = "Vergalid Drake";
-                    break;
+                    return "Vergalid Drake";
                 case 431:
-                    finalIllusion = "Dervish";
-                    break;
+                    return "Dervish";
                 case 432:
-                    finalIllusion = "Drake";
-                    break;
+                    return "Drake";
                 case 433:
-                    if (base2 == 1) { finalIllusion = "Solusek Goblin"; }
-                    else if (base2 == 2) { finalIllusion = "Dagnor Goblin"; }
-                    else if (base2 == 3) { finalIllusion = "Valley Goblin"; }
-                    else if (base2 == 7) { finalIllusion = "Aqua Goblin"; }
-                    else if (base2 == 8) { finalIllusion = "Goblin King"; }
-                    else if (base2 == 11) { finalIllusion = "Rallosian Goblin"; }
-                    else if (base2 == 12) { finalIllusion = "Frost Goblin"; }
-                    else { finalIllusion = "Goblin"; }
-                    break;
+                    if (base2 == 1) { return "Solusek Goblin"; }
+                    else if (base2 == 2) { return "Dagnor Goblin"; }
+                    else if (base2 == 3) { return "Valley Goblin"; }
+                    else if (base2 == 7) { return "Aqua Goblin"; }
+                    else if (base2 == 8) { return "Goblin King"; }
+                    else if (base2 == 11) { return "Rallosian Goblin"; }
+                    else if (base2 == 12) { return "Frost Goblin"; }
+                    else { return "Goblin"; }
                 case 434:
-                    finalIllusion = "Kirin";
-                    break;
+                    return "Kirin";
                 case 436:
-                    finalIllusion = "Basilisk";
-                    break;
+                    return "Basilisk";
                 case 439:
-                    if (base2 == 9) { finalIllusion = "Domain Prowler"; }
-                    else if (base2 == 11) { finalIllusion = "Spectral Tiger"; }
-                    else { finalIllusion = "Puma"; }
-                    break;
+                    if (base2 == 9) { return "Domain Prowler"; }
+                    else if (base2 == 11) { return "Spectral Tiger"; }
+                    else { return "Puma"; }
                 case 440:
-                    finalIllusion = "Spider";
-                    break;
+                    return "Spider";
                 case 441:
-                    finalIllusion = "Spider Queen";
-                    break;
+                    return "Spider Queen";
                 case 442:
-                    finalIllusion = "Animated Statue";
-                    break;
+                    return "Animated Statue";
                 case 450:
-                    finalIllusion = "Lava Spider";
-                    break;
+                    return "Lava Spider";
                 case 451:
-                    finalIllusion = "Lava Spider Queen";
-                    break;
+                    return "Lava Spider Queen";
                 case 445:
-                    finalIllusion = "Dragon Egg";
-                    break;
+                    return "Dragon Egg";
                 case 454:
-                    if (base2 == 0) { finalIllusion = "Werewolf"; }
-                    else if (base2 == 9) { finalIllusion = "White Werewolf"; }
-                    else { finalIllusion = "Werewolf " + base2; }
-                    break;
+                    if (base2 == 0) { return "Werewolf"; }
+                    else if (base2 == 9) { return "White Werewolf"; }
+                    else { return "Werewolf " + base2; }
                 case 455:
-                    if (base2 == 0) { finalIllusion = "Kobold"; }
-                    else if (base2 == 2) { finalIllusion = "Kobold King"; }
-                    else { finalIllusion = "Kobold " + base2; }
-                    break;
+                    if (base2 == 0) { return "Kobold"; }
+                    else if (base2 == 2) { return "Kobold King"; }
+                    else { return "Kobold " + base2; }
                 case 456:
-                    if (base2 == 0) { finalIllusion = "Sporali"; }
-                    else if (base2 == 2) { finalIllusion = "Violet Sporali"; }
-                    else if (base2 == 11) { finalIllusion = "Azure Sporali"; }
-                    else { finalIllusion = "Sporali " + base2; }
-                    break;
+                    if (base2 == 0) { return "Sporali"; }
+                    else if (base2 == 2) { return "Violet Sporali"; }
+                    else if (base2 == 11) { return "Azure Sporali"; }
+                    else { return "Sporali " + base2; }
                 case 457:
-                    finalIllusion = "Gnomework";
-                    break;
+                    return "Gnomework";
                 case 458:
-                    if (base2 == 0) { finalIllusion = "Orc"; }
-                    else if (base2 == 4) { finalIllusion = "Bloodmoon Orc"; }
-                    else { finalIllusion = "Orc " + base2; }
-                    break;
+                    if (base2 == 0) { return "Orc"; }
+                    else if (base2 == 4) { return "Bloodmoon Orc"; }
+                    else { return "Orc " + base2; }
                 case 461:
-                    finalIllusion = "Drachnid";
-                    break;
+                    return "Drachnid";
                 case 462:
-                    finalIllusion = "Drachnid Cocoon";
-                    break;
+                    return "Drachnid Cocoon";
                 case 463:
-                    finalIllusion = "Fungus Patch";
-                    break;
+                    return "Fungus Patch";
                 case 464:
-                    if (base2 == 0) { finalIllusion = "Gargoyle"; }
-                    else if (base2 == 1) { finalIllusion = "Runed Gargoyle"; }
-                    else { finalIllusion = "Gargoyle " + base2; }
-                    break;
+                    if (base2 == 0) { return "Gargoyle"; }
+                    else if (base2 == 1) { return "Runed Gargoyle"; }
+                    else { return "Gargoyle " + base2; }
                 case 467:
-                    if (base2 == 0) { finalIllusion = "Undead Shiliskin"; }
-                    else if (base2 == 5) { finalIllusion = "Armored Shiliskin"; }
-                    else { finalIllusion = "Shiliskin " + base2; }
-                    break;
+                    if (base2 == 0) { return "Undead Shiliskin"; }
+                    else if (base2 == 5) { return "Armored Shiliskin"; }
+                    else { return "Shiliskin " + base2; }
                 case 468:
-                    finalIllusion = "Snake";
-                    break;
+                    return "Snake";
                 case 469:
-                    finalIllusion = "Evil Eye";
-                    break;
+                    return "Evil Eye";
                 case 470:
-                    finalIllusion = "Minotaur";
-                    break;
+                    return "Minotaur";
                 case 471:
-                    finalIllusion = "Zombie";
-                    break;
+                    return "Zombie";
                 case 472:
-                    finalIllusion = "Clockwork Boar";
-                    break;
+                    return "Clockwork Boar";
                 case 473:
-                    if ((base2 == 0) || (base2 == 2)) { finalIllusion = "Fairy"; }
-                    else if (base2 == 1) { finalIllusion = "Tree Fairy"; }
-                    else { finalIllusion = "Fairy"; }
-                    break;
+                    if ((base2 == 0) || (base2 == 2)) { return "Fairy"; }
+                    else if (base2 == 1) { return "Tree Fairy"; }
+                    else { return "Fairy"; }
                 case 474:
-                    finalIllusion = "Witheran";
-                    break;
+                    return "Witheran";
                 case 475:
-                    finalIllusion = "Air Elemental3";
-                    break;
+                    return "Air Elemental3";
                 case 476:
-                    finalIllusion = "Earth Elemental3";
-                    break;
+                    return "Earth Elemental3";
                 case 477:
-                    finalIllusion = "Fire Elemental3";
-                    break;
+                    return "Fire Elemental3";
                 case 478:
-                    finalIllusion = "Water Elemental3";
-                    break;
+                    return "Water Elemental3";
                 case 479:
-                    finalIllusion = "Alligator";
-                    break;
+                    return "Alligator";
                 case 480:
-                    finalIllusion = "Bear";
-                    break;
+                    return "Bear";
                 case 482:
-                    finalIllusion = "Wolf";
-                    break;
+                    return "Wolf";
                 case 485:
-                    finalIllusion = "Spectre";
-                    break;
+                    return "Spectre";
                 case 487:
-                    finalIllusion = "Banshee";
-                    break;
+                    return "Banshee";
                 case 488:
-                    finalIllusion = "Banshee2";
-                    break;
+                    return "Banshee2";
                 case 489:
-                    finalIllusion = "Elddar";
-                    break;
+                    return "Elddar";
                 case 490:
-                    finalIllusion = "Forest Giant";
-                    break;
+                    return "Forest Giant";
                 case 491:
-                    finalIllusion = "Bone Golem";
-                    break;
+                    return "Bone Golem";
                 case 494:
-                    finalIllusion = "Shambling Mound";
-                    break;
+                    return "Shambling Mound";
                 case 495:
-                    finalIllusion = "Scrykin";
-                    break;
+                    return "Scrykin";
                 case 496:
-                    finalIllusion = "Treant";
-                    break;
+                    return "Treant";
                 case 497:
-                    finalIllusion = "Regal Vampire";
-                    break;
+                    return "Regal Vampire";
                 case 504:
-                    finalIllusion = "Clockwork Bomb";
-                    break;
+                    return "Clockwork Bomb";
                 case 512:
-                    finalIllusion = "Floating Skull";
-                    break;
+                    return "Floating Skull";
                 case 514:
-                    finalIllusion = "Totem";
-                    break;
+                    return "Totem";
                 case 519:
-                    if (base2 == 0) { finalIllusion = "Unicorn"; }
-                    else { finalIllusion = "Nightmare"; }
-                    break;
+                    if (base2 == 0) { return "Unicorn"; }
+                    else { return "Nightmare"; }
                 case 520:
-                    if (base2 == 0) { finalIllusion = "Bixie Drone"; }
-                    else if (base2 == 2) { finalIllusion = "Bixie Queen"; }
-                    else { finalIllusion = "Bixie " + base2; }
-                    break;
+                    if (base2 == 0) { return "Bixie Drone"; }
+                    else if (base2 == 2) { return "Bixie Queen"; }
+                    else { return "Bixie " + base2; }
                 case 521:
-                    if (base2 == 3) { finalIllusion = "Centaur Warrior"; }
-                    else { finalIllusion = "Centaur"; }
-                    break;
+                    if (base2 == 3) { return "Centaur Warrior"; }
+                    else { return "Centaur"; }
                 case 522:
-                    finalIllusion = "Drakkin";
-                    break;
+                    return "Drakkin";
                 case 524:
-                    if (base2 == 0) { finalIllusion = "Gnoll"; }
-                    else if (base2 == 1) { finalIllusion = "Undead Gnoll"; }
-                    else if (base2 == 2) { finalIllusion = "Mucktail Gnoll"; }
-                    else if (base2 == 3) { finalIllusion = "Gnoll Reaver"; }
-                    else if (base2 == 4) { finalIllusion = "Blackburrow Gnoll"; }
-                    else
-                    {
-                        finalIllusion = "Gnoll " + base2;
-                    }
-                    break;
+                    if (base2 == 0) { return "Gnoll"; }
+                    else if (base2 == 1) { return "Undead Gnoll"; }
+                    else if (base2 == 2) { return "Mucktail Gnoll"; }
+                    else if (base2 == 3) { return "Gnoll Reaver"; }
+                    else if (base2 == 4) { return "Blackburrow Gnoll"; }
+                    else { return "Gnoll " + base2; }
                 case 527:
-                    finalIllusion = "Hideous Harpy";
-                    break;
+                    return "Hideous Harpy";
                 case 529:
-                    finalIllusion = "Satyr";
-                    break;
+                    return "Satyr";
                 case 530:
-                    finalIllusion = "Dragon";
-                    break;
+                    return "Dragon";
                 case 549:
-                    finalIllusion = "New Goo";
-                    break;
+                    return "New Goo";
                 case 558:
-                    finalIllusion = "Aviak";
-                    break;
+                    return "Aviak";
                 case 559:
-                    if (base2 == 1) { finalIllusion = "Death Beetle"; }
-                    else { finalIllusion = "Beetle"; }
-                    break;
+                    if (base2 == 1) { return "Death Beetle"; }
+                    else { return "Beetle"; }
                 case 561:
-                    finalIllusion = "Kedge";
-                    break;
+                    return "Kedge";
                 case 562:
-                    finalIllusion = "Kerran";
-                    break;
+                    return "Kerran";
                 case 563:
-                    finalIllusion = "Shissar2";
-                    break;
+                    return "Shissar2";
                 case 564:
-                    if (base2 == 0) { finalIllusion = "Siren"; }
-                    else if (base2 == 1) { finalIllusion = "Siren Sorceress"; }
-                    else { finalIllusion = "Siren"; }
-                    break;
+                    if (base2 == 0) { return "Siren"; }
+                    else if (base2 == 1) { return "Siren Sorceress"; }
+                    else { return "Siren"; }
                 case 566:
-                    if (base2 == 0) { finalIllusion = "Plaguebringer"; }
-                    else if (base2 == 3) { finalIllusion = "Combine Human"; }
-                    else if (base2 == 7 && max == 1) { finalIllusion = "Male Hooded Plaguebringer"; }
-                    else if (base2 == 7 && max == 2) { finalIllusion = "Female Hooded Plaguebringer"; }
-                    else if (base2 == 7) { finalIllusion = "Hooded Plaguebringer"; }
-                    else if (base2 == 9) { finalIllusion = "Bokon"; }
-                    else
-                    {
-                        finalIllusion = "Plaguebringer " + base2;
-                    }
-                    break;
+                    if (base2 == 0) { return "Plaguebringer"; }
+                    else if (base2 == 3) { return "Combine Human"; }
+                    else if ((base2 == 7) && (max == 1)) { return "Male Hooded Plaguebringer"; }
+                    else if ((base2 == 7) && (max == 2)) { return "Female Hooded Plaguebringer"; }
+                    else if (base2 == 7) { return "Hooded Plaguebringer"; }
+                    else if (base2 == 9) { return "Bokon"; }
+                    else { return "Plaguebringer " + base2; }
                 case 568:
-                    if (base2 == 0) { finalIllusion = "Brownie"; }
-                    else if (base2 == 2 && max == 1) { finalIllusion = "Male Brownie Noble"; }
-                    else if (base2 == 2 && max == 2) { finalIllusion = "Female Brownie Noble"; }
-                    else if (base2 == 2) { finalIllusion = "Brownie Noble"; }
-                    else { finalIllusion = "Brownie"; }
-                    break;
+                    if (base2 == 0) { return "Brownie"; }
+                    else if ((base2 == 2 && max == 1)) { return "Male Brownie Noble"; }
+                    else if ((base2 == 2 && max == 2)) { return "Female Brownie Noble"; }
+                    else if (base2 == 2) { return "Brownie Noble"; }
+                    else { return "Brownie"; }
                 case 570:
-                    finalIllusion = "Steam Suit";
-                    break;
+                    return "Steam Suit";
                 case 571:
-                    finalIllusion = "Ghoul";
-                    break;
+                    return "Ghoul";
                 case 574:
-                    finalIllusion = "Embattled Minotaur";
-                    break;
+                    return "Embattled Minotaur";
                 case 575:
-                    finalIllusion = "Scarecrow";
-                    break;
+                    return "Scarecrow";
                 case 576:
-                    finalIllusion = "Shade2";
-                    break;
+                    return "Shade2";
                 case 577:
-                    finalIllusion = "Steamwork";
-                    break;
+                    return "Steamwork";
                 case 578:
-                    finalIllusion = "Tyranont";
-                    break;
+                    return "Tyranont";
                 case 580:
-                    finalIllusion = "Worg";
-                    break;
+                    return "Worg";
                 case 581:
-                    finalIllusion = "Wyvern";
-                    break;
+                    return "Wyvern";
                 case 585:
-                    finalIllusion = "Boulder";
-                    break;
+                    return "Boulder";
                 case 587:
-                    finalIllusion = "Elven Ghost";
-                    break;
+                    return "Elven Ghost";
                 case 600:
-                    finalIllusion = "Invisible Man of Zomm";
-                    break;
+                    return "Invisible Man of Zomm";
                 case 602:
-                    finalIllusion = "Burynai";
-                    break;
+                    return "Burynai";
                 case 604:
-                    finalIllusion = "Dracolich";
-                    break;
+                    return "Dracolich";
                 case 605:
-                    finalIllusion = "Iksar Ghost";
-                    break;
+                    return "Iksar Ghost";
                 case 606:
-                    finalIllusion = "Iksar Skeleton";
-                    break;
+                    return "Iksar Skeleton";
                 case 607:
-                    finalIllusion = "Mephit";
-                    break;
+                    return "Mephit";
                 case 608:
-                    finalIllusion = "Muddite";
-                    break;
+                    return "Muddite";
                 case 609:
-                    finalIllusion = "Raptor";
-                    break;
+                    return "Raptor";
                 case 610:
-                    finalIllusion = "Sarnak";
-                    break;
+                    return "Sarnak";
                 case 611:
-                    finalIllusion = "Scorpion";
-                    break;
+                    return "Scorpion";
                 case 612:
-                    finalIllusion = "Plague Fly";
-                    break;
+                    return "Plague Fly";
                 case 613:
-                    finalIllusion = "New Wurm";
-                    break;
+                    return "New Wurm";
                 case 614:
-                    if (base2 == 0) { finalIllusion = "Burning Nekhon"; }
-                    else if (base2 == 1) { finalIllusion = "Shadow Nekhon"; }
-                    else
-                    {
-                        finalIllusion = "Nekhon " + base2;
-                    }
-                    break;
+                    if (base2 == 0) { return "Burning Nekhon"; }
+                    else if (base2 == 1) { return "Shadow Nekhon"; }
+                    else { return "Nekhon " + base2; }
                 case 615:
-                    finalIllusion = "Crystal Hydra";
-                    break;
+                    return "Crystal Hydra";
                 case 616:
-                    finalIllusion = "Crystal Sphere";
-                    break;
+                    return "Crystal Sphere";
                 case 620:
-                    finalIllusion = "Vitrik";
-                    break;
+                    return "Vitrik";
                 case 626:
-                    finalIllusion = "Rallosian Giant";
-                    break;
+                    return "Rallosian Giant";
                 case 627:
-                    finalIllusion = "Sokokar";
-                    break;
+                    return "Sokokar";
                 case 638:
-                    finalIllusion = "Bellikos";
-                    break;
+                    return "Bellikos";
                 case 640:
-                    finalIllusion = "Brell Serilis";
-                    break;
+                    return "Brell Serilis";
                 case 643:
-                    finalIllusion = "Cliknar";
-                    break;
+                    return "Cliknar";
                 case 644:
-                    finalIllusion = "Ant";
-                    break;
+                    return "Ant";
                 case 645:
-                    if (base2 == 4) { finalIllusion = "Restless Coldain"; }
-                    else
-                    {
-                        finalIllusion = "New Coldain " + base2;
-                    }
-                    break;
+                    if (base2 == 4) { return "Restless Coldain"; }
+                    else { return "New Coldain " + base2; }
                 case 647:
-                    finalIllusion = "Crystal Sessiloid";
-                    break;
+                    return "Crystal Sessiloid";
                 case 649:
-                    finalIllusion = "Gigyn";
-                    break;
+                    return "Gigyn";
                 case 653:
-                    if (base2 == 0) { finalIllusion = "Telmira"; }
-                    else if (base2 == 1) { finalIllusion = "Flood Telmira"; }
-                    else
-                    {
-                        finalIllusion = "Telmira " + base2;
-                    }
-                    break;
+                    if (base2 == 0) { return "Telmira"; }
+                    else if (base2 == 1) { return "Flood Telmira"; }
+                    else { return "Telmira " + base2; }
                 case 658:
-                    finalIllusion = "Morell Thule";
-                    break;
+                    return "Morell Thule";
                 case 659:
-                    finalIllusion = "Marionette";
-                    break;
+                    return "Marionette";
                 case 660:
-                    finalIllusion = "Book Dervish";
-                    break;
+                    return "Book Dervish";
                 case 661:
-                    finalIllusion = "Topiary Lion";
-                    break;
+                    return "Topiary Lion";
                 case 662:
-                    finalIllusion = "Rotdog";
-                    break;
+                    return "Rotdog";
                 case 663:
-                    finalIllusion = "Amygdalan";
-                    break;
+                    return "Amygdalan";
                 case 664:
-                    finalIllusion = "Sandman";
-                    break;
+                    return "Sandman";
                 case 665:
-                    finalIllusion = "Grandfather Clock";
-                    break;
+                    return "Grandfather Clock";
                 case 666:
-                    finalIllusion = "Gingerbread Man";
-                    break;
+                    return "Gingerbread Man";
                 case 667:
-                    finalIllusion = "Royal Guardian";
-                    break;
+                    return "Royal Guardian";
                 case 668:
-                    if ((base2 == 0) || (base2 == 4)) { finalIllusion = "Rabbit"; }
-                    else if (base2 == 3) { finalIllusion = "Gouzah Rabbit"; }
-                    else if (base2 == 5) { finalIllusion = "Polka Dot Rabbit"; }
-                    else
-                    {
-                        finalIllusion = "Rabbit " + base2;
-                    }
-                    break;
+                    if ((base2 == 0) || (base2 == 4)) { return "Rabbit"; }
+                    else if (base2 == 3) { return "Gouzah Rabbit"; }
+                    else if (base2 == 5) { return "Polka Dot Rabbit"; }
+                    else { return "Rabbit " + base2; }
                 case 670:
-                    finalIllusion = "Cazic Thule";
-                    break;
+                    return "Cazic Thule";
                 case 681:
-                    finalIllusion = "Invisible Man";
-                    break;
+                    return "Invisible Man";
                 case 686:
-                    finalIllusion = "Selyrah";
-                    break;
+                    return "Selyrah";
                 case 687:
-                    finalIllusion = "Goral";
-                    break;
+                    return "Goral";
                 case 688:
-                    finalIllusion = "Braxi";
-                    break;
+                    return "Braxi";
                 case 689:
-                    finalIllusion = "Kangon";
-                    break;
+                    return "Kangon";
                 case 690:
-                    finalIllusion = "Invisible Man";
-                    break;
+                    return "Invisible Man";
                 case 694:
-                    finalIllusion = "Tumbleweed";
-                    break;
+                    return "Tumbleweed";
                 case 695:
-                    if (base2 == 0) { finalIllusion = "Undead Thelasa"; }
-                    else if (base2 == 21) { finalIllusion = "Thel Ereth Ril"; }
-                    else { finalIllusion = "Undead Thelasa"; }
-                    break;
+                    if (base2 == 0) { return "Undead Thelasa"; }
+                    else if (base2 == 21) { return "Thel Ereth Ril"; }
+                    else { return "Undead Thelasa"; }
                 case 696:
-                    if (base2 == 0) { finalIllusion = "Swinetor"; }
-                    else if (base2 == 1) { finalIllusion = "Swinetor Necro"; }
-                    else
-                    {
-                        finalIllusion = "Swinetor " + base2;
-                    }
-                    break;
+                    if (base2 == 0) { return "Swinetor"; }
+                    else if (base2 == 1) { return "Swinetor Necro"; }
+                    else { return "Swinetor " + base2; }
                 case 697:
-                    finalIllusion = "Triumvirate";
-                    break;
+                    return "Triumvirate";
                 case 698:
-                    if (base2 == 0) { finalIllusion = "Hadal"; }
-                    else if (base2 == 2) { finalIllusion = "Hadal Templar"; }
-                    else
-                    {
-                        finalIllusion = "Hadal " + base2;
-                    }
-                    break;
+                    if (base2 == 0) { return "Hadal"; }
+                    else if (base2 == 2) { return "Hadal Templar"; }
+                    else { return "Hadal " + base2; }
                 case 700:
-                    finalIllusion = "Parasitic Scavenger";
-                    break;
+                    return "Parasitic Scavenger";
                 case 702:
-                    finalIllusion = "Ship in a Bottle";
-                    break;
+                    return "Ship in a Bottle";
                 case 708:
-                    finalIllusion = "Alaran Ghost";
-                    break;
+                    return "Alaran Ghost";
                 case 709:
-                    finalIllusion = "Skystrider";
-                    break;
+                    return "Skystrider";
                 case 711:
-                    finalIllusion = "Aviak Pull Along";
-                    break;
+                    return "Aviak Pull Along";
                 case 713:
-                    if (base2 == 0) { finalIllusion = "Santugs Antonican Dog"; }
-                    else if (base2 == 1) { finalIllusion = "Grey Wolf"; }
-                    else if (base2 == 2) { finalIllusion = "Halasian Wolf"; }
-                    else if (base2 == 3) { finalIllusion = "Antonican Wolf"; }
-                    else if (base2 == 4) { finalIllusion = "Grey Frostfell Dog"; }
-                    else if (base2 == 5) { finalIllusion = "Halasian Frostfell Dog"; }
-                    else if (base2 == 6) { finalIllusion = "Antonican Frostfell Dog"; }
-                    else if (base2 == 7) { finalIllusion = "Santugs Grey Dog"; }
-                    else if (base2 == 8) { finalIllusion = "Santugs Halasian Dog"; }
-                    else { finalIllusion = "Dog"; }
-                    break;
+                    if (base2 == 0) { return "Santugs Antonican Dog"; }
+                    else if (base2 == 1) { return "Grey Wolf"; }
+                    else if (base2 == 2) { return "Halasian Wolf"; }
+                    else if (base2 == 3) { return "Antonican Wolf"; }
+                    else if (base2 == 4) { return "Grey Frostfell Dog"; }
+                    else if (base2 == 5) { return "Halasian Frostfell Dog"; }
+                    else if (base2 == 6) { return "Antonican Frostfell Dog"; }
+                    else if (base2 == 7) { return "Santugs Grey Dog"; }
+                    else if (base2 == 8) { return "Santugs Halasian Dog"; }
+                    else { return "Dog"; }
                 case 715:
-                    finalIllusion = "Holgresh";
-                    break;
+                    return "Holgresh";
                 case 718:
-                    finalIllusion = "Ratman";
-                    break;
+                    return "Ratman";
                 case 719:
-                    finalIllusion = "Fallen Knight";
-                    break;
+                    return "Fallen Knight";
                 case 722:
-                    finalIllusion = "Akhevan";
-                    break;
+                    return "Akhevan";
                 case 730:
-                    finalIllusion = "Orb";
-                    break;
+                    return "Orb";
                 case 734:
-                    finalIllusion = "Tirun";
-                    break;
+                    return "Tirun";
                 case 741:
-                    if (base2 == 0) { finalIllusion = "Bixie"; }
-                    else if (base2 == 2) { finalIllusion = "Bixie Soldier"; }
-                    else
-                    {
-                        finalIllusion = "Bixie " + base2;
-                    }
-                    break;
+                    if (base2 == 0) { return "Bixie"; }
+                    else if (base2 == 2) { return "Bixie Soldier"; }
+                    else { return "Bixie " + base2; }
                 case 742:
-                    finalIllusion = "Butterfly";
-                    break;
+                    return "Butterfly";
                 case 743:
-                    finalIllusion = "Ursarachnid";
-                    break;
+                    return "Ursarachnid";
                 case 745:
-                    finalIllusion = "Molerat";
-                    break;
+                    return "Molerat";
                 case 752:
-                    finalIllusion = "Ruishi";
-                    break;
+                    return "Ruishi";
                 case 757:
-                    finalIllusion = "Reindeer";
-                    break;
+                    return "Reindeer";
                 case 760:
-                    finalIllusion = "Book Minion";
-                    break;
+                    return "Book Minion";
                 case 763:
-                    finalIllusion = "Clockwork Gnome";
-                    break;
+                    return "Clockwork Gnome";
                 case 766:
-                    finalIllusion = "Arc Worker";
-                    break;
+                    return "Arc Worker";
                 case 767:
-                    finalIllusion = "Imp";
-                    break;
+                    return "Imp";
                 case 768:
-                    finalIllusion = "Relifed Skeleton";
-                    break;
+                    return "Relifed Skeleton";
                 case 769:
-                    finalIllusion = "Cursed Siren";
-                    break;
+                    return "Cursed Siren";
                 case 771:
-                    finalIllusion = "Tyrannosaurus";
-                    break;
+                    return "Tyrannosaurus";
                 case 774:
-                    finalIllusion = "Ankylosaurus";
-                    break;
+                    return "Ankylosaurus";
                 case 783:
-                    finalIllusion = "New Treant";
-                    break;
+                    return "New Treant";
                 case 785:
-                    finalIllusion = "Thaell Ew";
-                    break;
+                    return "Thaell Ew";
                 case 791:
-                    if (base2 == 1) { finalIllusion = "New Phoenix"; }
-                    else { finalIllusion = "New Hawk"; }
-                    break;
+                    if (base2 == 1) { return "New Phoenix"; }
+                    else { return "New Hawk"; }
                 case 792:
-                    finalIllusion = "New Parrot";
-                    break;
+                    return "New Parrot";
                 case 796:
-                    finalIllusion = "Ancient Wolf";
-                    break;
+                    return "Ancient Wolf";
                 case 798:
-                    finalIllusion = "Ancient Chokidai";
-                    break;
+                    return "Ancient Chokidai";
                 case 802:
-                    finalIllusion = "Ancient Skeleton";
-                    break;
+                    return "Ancient Skeleton";
                 case 805:
-                    finalIllusion = "Ancient Tiger";
-                    break;
+                    return "Ancient Tiger";
                 case 807:
-                    finalIllusion = "New Golem";
-                    break;
+                    return "New Golem";
                 case 813:
-                    finalIllusion = "New Wasp";
-                    break;
+                    return "New Wasp";
                 case 814:
-                    finalIllusion = "New Scorpikis";
-                    break;
+                    return "New Scorpikis";
                 case 817:
-                    finalIllusion = "New Succulent";
-                    break;
+                    return "New Succulent";
                 case 819:
-                    finalIllusion = "New Devourer";
-                    break;
+                    return "New Devourer";
                 case 825:
-                    finalIllusion = "Cat";
-                    break;
+                    return "Cat";
                 case 826:
-                    finalIllusion = "Spectral Wolf";
-                    break;
+                    return "Spectral Wolf";
                 case 829:
-                    finalIllusion = "Valkyrie";
-                    break;
+                    return "Valkyrie";
                 case 830:
-                    finalIllusion = "Monkey";
-                    break;
+                    return "Monkey";
                 case 837:
-                    finalIllusion = "Gnoll Pup";
-                    break;
+                    return "Gnoll Pup";
                 case 841:
-                    finalIllusion = "Sarnak Skeleton";
-                    break;
+                    return "Sarnak Skeleton";
                 case 842:
-                    finalIllusion = "New Yeti";
-                    break;
+                    return "New Yeti";
                 case 843:
-                    finalIllusion = "Drolvarg";
-                    break;
+                    return "Drolvarg";
                 case 845:
-                    if (base2 == 12) { finalIllusion = "Snow Kitten"; }
-                    else
-                    {
-                        finalIllusion = "New Kitten " + base2;
-                    }
-                    break;
+                    if (base2 == 12) { return "Snow Kitten"; }
+                    else { return "New Kitten " + base2; }
                 case 855:
-                    finalIllusion = "Earth Elemental4";
-                    break;
+                    return "Earth Elemental4";
                 case 856:
-                    finalIllusion = "Air Elemental4";
-                    break;
+                    return "Air Elemental4";
                 case 857:
-                    finalIllusion = "Water Elemental4";
-                    break;
+                    return "Water Elemental4";
                 case 858:
-                    finalIllusion = "Fire Elemental4";
-                    break;
+                    return "Fire Elemental4";
                 case 862:
-                    if ((base2 == 0) && (max == 1)) { finalIllusion = "Male Djinn"; }
-                    else if ((base2 == 0) && (max == 2)) { finalIllusion = "Female Djinn"; }
-                    else if ((base2 == 1) && (max == 1)) { finalIllusion = "Duende"; }
-                    else if ((base2 == 1) && (max == 2)) { finalIllusion = "Ondine"; }
-                    else if ((base2 == 2) && (max == 0)) { finalIllusion = "Aalishai Efreeti"; }
-                    else if ((base2 == 2) && (max == 1)) { finalIllusion = "Male Efreeti"; }
-                    else if ((base2 == 2) && (max == 2)) { finalIllusion = "Female Efreeti"; }
-                    else { finalIllusion = "Djinn"; }
-                    break;
+                    if ((base2 == 0) && (max == 1)) { return "Male Djinn"; }
+                    else if ((base2 == 0) && (max == 2)) { return "Female Djinn"; }
+                    else if ((base2 == 1) && (max == 1)) { return "Duende"; }
+                    else if ((base2 == 1) && (max == 2)) { return "Ondine"; }
+                    else if ((base2 == 2) && (max == 0)) { return "Aalishai Efreeti"; }
+                    else if ((base2 == 2) && (max == 1)) { return "Male Efreeti"; }
+                    else if ((base2 == 2) && (max == 2)) { return "Female Efreeti"; }
+                    else { return "Djinn"; }
                 case 864:
-                    if (base2 == 1) { finalIllusion = "Magmatic Snail"; }
-                    else { finalIllusion = "Snail"; }
-                    break;
+                    if (base2 == 1) { return "Magmatic Snail"; }
+                    else { return "Snail"; }
                 case 871:
-                    finalIllusion = "Ulthork";
-                    break;
+                    return "Ulthork";
                 case 872:
-                    if (base2 == 5) { finalIllusion = "Proudheart Hare"; }
-                    else if (base2 == 6) { finalIllusion = "Trueheart Hare"; }
-                    else if (base2 == 7) { finalIllusion = "Boundless Heart Hare"; }
-                    else { finalIllusion = "Hare"; }
-                    break;
+                    if (base2 == 5) { return "Proudheart Hare"; }
+                    else if (base2 == 6) { return "Trueheart Hare"; }
+                    else if (base2 == 7) { return "Boundless Heart Hare"; }
+                    else { return "Hare"; }
                 case 873:
-                    finalIllusion = "New Zombie";
-                    break;
+                    return "New Zombie";
                 case 882:
-                    finalIllusion = "Othmir";
-                    break;
+                    return "Othmir";
                 case 883:
-                    finalIllusion = "New Shark";
-                    break;
+                    return "New Shark";
                 case 887:
-                    finalIllusion = "Baby Dragon";
-                    break;
+                    return "Baby Dragon";
                 case 891:
-                    finalIllusion = "Syl Ren";
-                    break;
+                    return "Syl Ren";
                 case 895:
-                    finalIllusion = "New Shade";
-                    break;
+                    return "New Shade";
                 case 897:
-                    if (base2 == 8) { finalIllusion = "Red Construct Owlbear"; }
-                    else if (base2 == 9) { finalIllusion = "Blue Construct Owlbear"; }
-                    else if (base2 == 10) { finalIllusion = "Brown Construct Owlbear"; }
-                    else if (base2 == 11) { finalIllusion = "Teal Construct Owlbear"; }
-                    else { finalIllusion = "New Owlbear"; }
-                    break;
+                    if (base2 == 8) { return "Red Construct Owlbear"; }
+                    else if (base2 == 9) { return "Blue Construct Owlbear"; }
+                    else if (base2 == 10) { return "Brown Construct Owlbear"; }
+                    else if (base2 == 11) { return "Teal Construct Owlbear"; }
+                    else { return "New Owlbear"; }
                 case 900:
-                    finalIllusion = "Blood Bag";
-                    break;
+                    return "Blood Bag";
                 case 901:
-                    finalIllusion = "New Stonegrabber";
-                    break;
+                    return "New Stonegrabber";
                 case 904:
-                    finalIllusion = "New Fungal Fiend";
-                    break;
+                    return "New Fungal Fiend";
                 case 905:
-                    finalIllusion = "New Grimling";
-                    break;
+                    return "New Grimling";
                 case 908:
-                    finalIllusion = "New Shrieker";
-                    break;
+                    return "New Shrieker";
                 case 909:
-                    finalIllusion = "New Underbulk";
-                    break;
+                    return "New Underbulk";
                 case 914:
-                    finalIllusion = "Gumdrop";
-                    break;
+                    return "Gumdrop";
                 case 917:
-                    finalIllusion = "Spectral Bear";
-                    break;
+                    return "Spectral Bear";
                 case 918:
-                    if (base2 == 5) { finalIllusion = "Proudheart Lion"; }
-                    else if (base2 == 6) { finalIllusion = "Trueheart Lion"; }
-                    else if (base2 == 7) { finalIllusion = "Boundless Lion"; }
-                    else { finalIllusion = "Stitchwork Lion"; }
-                    break;
+                    if (base2 == 5) { return "Proudheart Lion"; }
+                    else if (base2 == 6) { return "Trueheart Lion"; }
+                    else if (base2 == 7) { return "Boundless Lion"; }
+                    else { return "Stitchwork Lion"; }
                 case 919:
-                    finalIllusion = "New Sporali";
-                    break;
+                    return "New Sporali";
                 case 925:
-                    finalIllusion = "New Skunk";
-                    break;
+                    return "New Skunk";
                 case 929:
-                    finalIllusion = "Badger";
-                    break;
+                    return "Badger";
                 case 934:
-                    finalIllusion = "Fox";
-                    break;
+                    return "Fox";
                 case 935:
-                    if (base2 == 3) { finalIllusion = "Proudheart Red Panda"; }
-                    else if (base2 == 4) { finalIllusion = "Boundlessheart Red Panda"; }
-                    else if (base2 == 5) { finalIllusion = "Trueheart Red Panda"; }
-                    else if (base2 == 6) { finalIllusion = "Freeheart Red Panda"; }
-                    else if (base2 == 7) { finalIllusion = "Aceheart Red Panda"; }
-                    else if (base2 == 8) { finalIllusion = "Openheart Red Panda"; }
-                    else if (base2 == 9) { finalIllusion = "Flawless Heart Red Panda"; }
-                    else if (base2 == 10) { finalIllusion = "Boldheart Red Panda"; }
-                    else if (base2 == 11) { finalIllusion = "Sisterheart Red Panda"; }
-                    else { finalIllusion = "Red Panda"; }
-                    break;
+                    if (base2 == 3) { return "Proudheart Red Panda"; }
+                    else if (base2 == 4) { return "Boundlessheart Red Panda"; }
+                    else if (base2 == 5) { return "Trueheart Red Panda"; }
+                    else if (base2 == 6) { return "Freeheart Red Panda"; }
+                    else if (base2 == 7) { return "Aceheart Red Panda"; }
+                    else if (base2 == 8) { return "Openheart Red Panda"; }
+                    else if (base2 == 9) { return "Flawless Heart Red Panda"; }
+                    else if (base2 == 10) { return "Boldheart Red Panda"; }
+                    else if (base2 == 11) { return "Sisterheart Red Panda"; }
+                    else { return "Red Panda"; }
                 case 936:
-                    finalIllusion = "Candlefolk";
-                    break;
+                    return "Candlefolk";
                 case 937:
-                    finalIllusion = "Candlefolk 2";
-                    break;
+                    return "Candlefolk 2";
                 case 939:
-                    finalIllusion = "Rallosian Ogre";
-                    break;
+                    return "Rallosian Ogre";
                 case 942:
-                    finalIllusion = "Candlemaster";
-                    break;
+                    return "Candlemaster";
                 case 943:
-                    finalIllusion = "Candlemaster 2";
-                    break;
+                    return "Candlemaster 2";
                 case 945:
-                    finalIllusion = "Scalewrought Monitor";
-                    break;
+                    return "Scalewrought Monitor";
                 case 947:
-                    finalIllusion = "Scalewrought Flyer";
-                    break;
+                    return "Scalewrought Flyer";
                 case 949:
-                    finalIllusion = "Scalewrought Ground Attacker";
-                    break;
+                    return "Scalewrought Ground Attacker";
                 case 958:
-                    if (base2 == 0) { finalIllusion = "Blue Bovoch"; }
-                    else if (base2 == 2) { finalIllusion = "Brown Bovoch"; }
-                    else { finalIllusion = "Bovoch"; }
-                    break;
+                    if (base2 == 0) { return "Blue Bovoch"; }
+                    else if (base2 == 2) { return "Brown Bovoch"; }
+                    else { return "Bovoch"; }
                 case 965:
-                    finalIllusion = "Scrykin 2";
-                    break;
+                    return "Scrykin 2";
                 case 966:
-                    finalIllusion = "Beaster Egg";
-                    break;
+                    return "Beaster Egg";
                 case 967:
-                    finalIllusion = "Cloth Butterfly";
-                    break;
+                    return "Cloth Butterfly";
                 case 975:
-                    finalIllusion = "Magic Storm";
-                    break;
+                    return "Magic Storm";
                 case 981:
-                    finalIllusion = "Gifty Giver Goblin";
-                    break;
+                    return "Gifty Giver Goblin";
                 default:
-                    finalIllusion = "UNKNOWN Illusion " + base1;
-                    break;
+                    return "UNKNOWN Illusion " + base1;
             }
 
-            return finalIllusion;
         }
     }
 }
