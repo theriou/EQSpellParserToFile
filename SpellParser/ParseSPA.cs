@@ -1,4 +1,5 @@
 ﻿using static SpellParser.Calc;
+using static SpellParser.Category;
 using static SpellParser.Classes;
 using static SpellParser.ClassLimit;
 using static SpellParser.Effects;
@@ -79,9 +80,25 @@ namespace SpellParser
                             extraData = (extraData == "same" ? "Safe Spot in Zone" : extraData);
                             if (rank == 5) { rank = 2; }
                             if (rank == 10) { rank = 3; }
+                            string varmax = string.Empty;
+                            if (max[x] > 1000)
+                            {
+                                varmax = ", Max Level: " + (max[x] - 1000);
+                            }
+                            else
+                            {
+                                if (max[x] == 0)
+                                {
+                                    varmax = " up to your Level";
+                                }
+                                else
+                                {
+                                    varmax = ", Max Level: Yours " + (max[x] < 0 ? " - " + Math.Abs(max[x]) : " + " + max[x]);
+                                }
+                            }
 
                             string parsedSPA = ParseSPASlots(spellID, slot[x], spa, base1, base2[x], calc[x], max[x],
-                                rank, value, range, repeating, maxLevel, extraData, skill, target, x);
+                                rank, value, range, repeating, maxLevel, extraData, skill, target, x, varmax);
 
                             if (!string.IsNullOrEmpty(parsedSPA))
                             {
@@ -102,7 +119,7 @@ namespace SpellParser
         }
 
         public static string ParseSPASlots(ulong spellID, ulong slot, List<ulong> spa, List<double> base1, double base2, double calc, double max,
-            ulong rank, double value, string range, string repeating, string maxLevel, string extra, string skill, string target, int x)
+            ulong rank, double value, string range, string repeating, string maxLevel, string extra, string skill, string target, int x, string varmax)
         {
             string finalString = string.Empty, 
                 location = string.Empty;
@@ -581,6 +598,121 @@ namespace SpellParser
 
 
 
+                case 500:
+                    finalString = FormatPercent("Spell Haste", value) + " (v500)";
+                    break;
+                case 501:
+                    finalString = (base1[x] < 0 ? "Increase" : "Decrease") + " Cast Time by " + Math.Abs(base1[x] / 1000) + "s";
+                    break;
+                case 502:
+                    if ((base2 != base1[x]) && (base2 != 0))
+                    {
+                        finalString = "Fear Stun NPC for " + (base1[x] / 1000) + "s (PC for " + (base2 / 1000) + "s) " + varmax;
+                    }
+                    else
+                    {
+                        finalString = "Fear Stun NPC for " + (base1[x] / 1000) + "s" + varmax;
+                    }
+                    break;
+                case 503:
+                    finalString = FormatPercent((base2 == 0 ? "Rear" : "Frontal") + " Arc Melee Damage", (base1[x] / 10));
+                    break;
+                case 504:
+                    finalString = FormatCount((base2 == 0 ? "Rear" : "Frontal") + " Arc Melee Damage", base1[x]);
+                    break;
+                case 505:
+                    finalString = FormatPercent((base2 == 0 ? "Rear" : "Frontal") + " Arc Melee Damage Taken", (base1[x] / 10));
+                    break;
+                case 506:
+                    finalString = FormatCount((base2 == 0 ? "Rear" : "Frontal") + " Arc Melee Damage Taken", base1[x]);
+                    break;
+                case 507:
+                    finalString = FormatPercentRange("Spell Damage", (base1[x] / 10), (base2 / 10), false) + " (v507, After Crit)";
+                    break;
+                case 509:
+                    finalString = "Consume " + (base1[x] / 10) + "% of Hit Points to " + (base2 >= 0 ? "Heal" : "Damage") + " for " + Math.Abs(base2 / 10) + "% of Hit Points";
+                    break;
+                case 510:
+                    finalString = "Improve Resist Modifier by " + base1[x];
+                    break;
+                case 511:
+                    finalString = "Limit: 1 Proc per " + (base2 / 1000) + "s (v511)";
+                    break;
+                case 512:
+                    finalString = "Limit: 1 Proc per " + (base2 / 1000) + "s (v512)";
+                    break;
+                case 513:
+                    finalString = FormatPercent("Max Mana", (base1[x] / 100));
+                    break;
+                case 514:
+                    finalString = FormatPercent("Max Endurance", (base1[x] / 100));
+                    break;
+                case 515:
+                    finalString = FormatPercent("Avoidance", (base1[x] / 100));
+                    break;
+                case 516:
+                    finalString = FormatPercent("Mitigation", (base1[x] / 100));
+                    break;
+                case 517:
+                    finalString = FormatPercent("Attack", (base1[x] / 100));
+                    break;
+                case 518:
+                    finalString = FormatPercent("Accuracy", (base1[x] / 100));
+                    break;
+                case 519:
+                    finalString = FormatCount("Luck", (base1[x] / 100));
+                    break;
+                case 520:
+                    finalString = FormatPercent("Luck", (base1[x] / 100));
+                    break;
+                case 521:
+                    finalString = "Absorb Damage using Endurance: " + (base1[x] / 100) + "%" + (base2 != 10000 ? ", " + (base2 / 10000) + " Endurance per Hit Point" : "") + (max > 0 ? ", Max per Hit: " + max : "");
+                    break;
+                case 522:
+                    finalString = FormatPercent("Current Mana", (base1[x] / 100)) + " of Total Mana, Max: " + max;
+                    break;
+                case 523:
+                    finalString = FormatPercent("Current Endurance", (base1[x] / 100)) + " of Total Endurance, Max: " + max;
+                    break;
+                case 524:
+                    finalString = FormatPercent("Current Hit Points", base1[x]) + " of Total Hit Points per Tick, Max: " + max;
+                    break;
+                case 525:
+                    finalString = FormatPercent("Current Mana", (base1[x] / 100)) + " of Total Mana per Tick, Max: " + max;
+                    break;
+                case 526:
+                    finalString = FormatPercent("Current Endurance", (base1[x] / 100)) + " of Total Endurance per Tick, Max: " + max;
+                    break;
+                case 527:
+                    finalString = FormatCount("Current Hit Points", value) + repeating + range + (base2 > 0 ? " if " + SpellTargetRestrict(base2) : "") + " (v527)";
+                    break;
+                case 528:
+                    finalString = FormatPercent("Base Spell Effectiveness", value) + " (v528)";
+                    break;
+                case 529:
+                    finalString = "Limit Spell Line: " + (base1[x] > 0 ? "" : "Exclude ") + "[Line " + Math.Abs(base1[x]) + "]";
+                    break;
+                case 530:
+                    finalString = "Limit Spell Sub Category: " + (base1[x] > 0 ? "" : "Exclude ") + SpellSubCategory(Math.Abs(base1[x])) + " (v530)";
+                    break;
+                case 531:
+                    finalString = "Use Graphic" + (base1[x] > 0 ? ", Primary: [ITFile " + base1[x] + "]" : "") + (base2 > 0 ? ", Secondary: [ITFile " + base2 + "]" : "") + (max > 0 ? ", Tint: " + max : "");
+                    break;
+                case 532:
+                    finalString = "Increase Duration by " + (base1[x] * 6) + "s (v532)";
+                    break;
+                case 533:
+                    finalString = (base1[x] < 0 ? "Increase" : "Decrease") + " Timer by " + (Math.Abs(base1[x] / 1000)) + "s (v533)";
+                    break;
+                case 534:
+                    finalString = FormatPercentRange("Spell Damage", base1[x], base2, false) + " (v534, Before Crit)";
+                    break;
+                case 535:
+                    finalString = FormatCount("Spell Damage", base1[x]) + " (v535, Before Crit)";
+                    break;
+                case 536:
+                    finalString = FormatCount("Healing", base1[x]) + " (v536, Before Crit)";
+                    break;
                 default:
                     finalString = "Unknown SPA (" + spa[x] + ")";
                     break;
