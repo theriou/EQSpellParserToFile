@@ -2,7 +2,7 @@
 {
     internal class Effects
     {
-        public static string SpellEffects(double effect)
+        public static string SpellEffect(double effect)
         {
             return effect switch
             {

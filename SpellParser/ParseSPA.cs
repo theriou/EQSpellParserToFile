@@ -4,6 +4,7 @@ using static SpellParser.Classes;
 using static SpellParser.ClassLimit;
 using static SpellParser.Effects;
 using static SpellParser.Format;
+using static SpellParser.Resist;
 using static SpellParser.Skill;
 using static SpellParser.Target;
 
@@ -122,7 +123,8 @@ namespace SpellParser
             ulong rank, double value, string range, string repeating, string maxLevel, string extra, string skill, string target, int x, string varmax)
         {
             string location = string.Empty,
-                itemName = string.Empty;
+                itemName = string.Empty,
+                tempText = string.Empty;
             double stackMax;
 
             switch (spa[x])
@@ -451,31 +453,51 @@ namespace SpellParser
                 case 120:
                     return FormatPercent("Healing Taken", value) + " (v120, Before Crit)";
                 case 121:
+                    return FormatCount("Reverse Damage Shield", -value) + " (Delay Scaled)";
                 case 122:
+                    return "Decrease " + SpellSkill(base1[x]) + " Skill by " + calc + "%";
                 case 123:
                     return "Screech";
                 case 124:
+                    return FormatPercentRange("Spell Damage", base1[x], base2, false) + " (v124, Before DoT Crit, After DD Crit)";
                 case 125:
+                    return FormatPercentRange("Healing", base1[x], base2, false) + " (v125, Before Crit)";
                 case 126:
+                    return FormatPercentRange("Spell Resist Rate", base1[x], base2, true);
                 case 127:
+                    return FormatPercent("Spell Haste", base1[x]);
                 case 128:
+                    return FormatPercent("Spell Duration", base1[x]);
                 case 129:
+                    return FormatPercent("Spell Haste", base1[x]);
                 case 130:
+                    return FormatPercentRange("Hate", base1[x], base2, false);
                 case 131:
+                    return FormatPercentRange("Chance of Using Reagent", base1[x], base2, true);
                 case 132:
+                    return FormatPercentRange("Spell Mana Cost", base1[x], base2, true);
                 case 134:
                     return "Limit Max Level: " + base1[x] + " (Lose " + (base2 == 0 ? 100 : base2) + "% per Level)";
                 case 135:
+                    return "Limit Resist: " + (base1[x] >= 0 ? "" : "Exclude ") + SpellResist(Math.Abs(base1[x]));
                 case 136:
+                    return "Limit Target: " + (base1[x] >= 0 ? "" : "Exclude ") + SpellTarget(Math.Abs(base1[x]));
                 case 137:
+                    return "Limit Effect: " + (base1[x] >= 0 ? "" : "Exclude ") + SpellEffect(Math.Abs(base1[x]));
                 case 138:
+                    return "Limit Type: " + (base1[x] == 0 ? "Detrimental" : "Beneficial");
                 case 139:
+                    return "Limit Spell: " + (base1[x] >= 0 ? "" : "Exclude") + "[Spell " + Math.Abs(base1[x]) + "|" + Globals.spellBaseData.Where(c => c.ID == base1[x]).Select(c => c.Name).FirstOrDefault() + "]";
                 case 140:
+                    return "Limit Min Duration: " + (base1[x] * 6) + "s";
                 case 141:
                     return "Limit Max Duration: Instant Spells Only";
                 case 142:
+                    return "Limit Min Level: " + base1[x];
                 case 143:
+                    return "Limit Min Casting Time: " + (base1[x] / 1000) + "s";
                 case 144:
+                    return "Limit Max Casting Time: " + (base1[x] / 1000) + "s";
                 case 145:
                     if ((spa[1] == 146) && (spa[2] == 146))
                     {
@@ -485,20 +507,25 @@ namespace SpellParser
                 case 146:
                     return "";
                 case 147:
+                    return FormatPercent("Current Hit Points", value) + " of Total Hit Points, Max: " + max;
                 case 148:
-                    return "Stacking: Block New Spell if Slot " + base2 + " is " + SpellEffects(base1[x]) + " and Less Than " + max;
+                    return "Stacking: Block New Spell if Slot " + base2 + " is " + SpellEffect(base1[x]) + " and Less Than " + max;
                 case 149:
-                    return "Stacking: Overwrite Existing Spell if Slot " + base2 + " is " + SpellEffects(base1[x]) + " and Less Than " + max;
+                    return "Stacking: Overwrite Existing Spell if Slot " + base2 + " is " + SpellEffect(base1[x]) + " and Less Than " + max;
                 case 150:
+                    return "Divine Intervention with " + max + " Heal";
                 case 151:
                     return "Suspend Pet";
                 case 152:
+                    return "Summon Pet: " + extra + " x " + base1[x] + " for " + max + "s";
                 case 153:
+                    return "Balance Group Hit Points with " + value + "% Penalty";
                 case 154:
-                case 155:
+                    return (base2 != 0 ? "Decrease" : "Dispel") + " Detrimental " + (base2 != 0 ? "Buff Duration by 50% " : "") + "(" + (base1[x] / 10) + "% Chance)" + maxLevel;
                 case 156:
                     return "Illusion: Target";
                 case 157:
+                    return FormatCount("Spell Damage Shield", -value);
                 case 158:
                     return FormatPercent("Chance to Reflect Spell", base1[x]) + (max != 0 ? " for " + max + "% Base Damage" : "") + (base2 > 0 ? " with " + base2 + " Improved Resist Modifier" : "") + (base2 < 0 ? " with " + Math.Abs(base2) + " Reduced Resist Modifier" : "");
                 case 159:
@@ -533,15 +560,23 @@ namespace SpellParser
                 case 179:
                     return "Instrument Modifier: " + skill + " " + value;
                 case 180:
+                    return FormatPercent("Chance to Resist Spell", value);
                 case 181:
+                    return FormatPercent("Chance to Resist Fear Spell", value);
                 case 182:
+                    return FormatPercent("Weapon Delay", (value / 10));
                 case 183:
                     return "";
                 case 184:
+                    return FormatPercent("Chance to Hit" + (base2 != -1 ? " with " + SpellSkill(base2) : ""), value);
                 case 185:
+                    return FormatPercent(SpellSkill(base2) + " Damage", base1[x]) + " (v185)";
                 case 186:
+                    return FormatPercent("Min " + SpellSkill(base2) + " Damage", value);
                 case 187:
+                    return "Balance Group Mana with " + value + "% Penalty";
                 case 188:
+                    return FormatPercent("Chance to Block", value);
                 case 189:
                     return FormatCount("Current Endurance", value) + repeating + range;
                 case 190:
@@ -549,22 +584,42 @@ namespace SpellParser
                 case 191:
                     return "Melee and Skill Silence";
                 case 192:
+                    return FormatCount("Hate", value) + repeating + range;
                 case 193:
+                    return skill + " Attack for " + base1[x] + (max > 0 ? " (" + max + " if PvP)" : "") + " with " + base2 + "% Accuracy Mod";
                 case 194:
+                    if (max == 1075) { max = max - 1070; }
+                    else if (max == 1109) { max = max - 1000; }
+                    if (max == 0) { } 
+                    else 
+                    {
+                        tempText = (max == 109 ? " on NPCs up to Level: " + max : " on NPCs Your Level + " + max);
+                    }
+                    return base1[x] + "% Chance to Cancel Aggro" + (string.IsNullOrEmpty(tempText) ? "" : tempText) + (((base2 > 0) && (base2 != 75)) ? ", Cast [Spell " + base2 + "|" + Globals.spellBaseData.Where(c => c.ID == base2).Select(c => c.Name).FirstOrDefault() + "] on Success" : "");
                 case 195:
+                    return FormatPercent("Chance to Resist Any Stun", value);
                 case 196:
+                    return "Strikethrough(" + value + ")";
                 case 197:
+                    return FormatPercent(SpellSkill(base2) + " Damage Taken", value);
                 case 198:
+                    return FormatCount("Current Endurance", value);
                 case 199:
+                    return base1[x] + "% Chance to Taunt" + (base2 > 0 ? " and Increase Hate by " + base2 : "");
                 case 200:
+                    return FormatPercent("Worn Proc Rate", value);
                 case 201:
+                    return "Add Range Proc: [Spell " + base1[x] + "|" + Globals.spellBaseData.Where(c => c.ID == base1[x]).Select(c => c.Name).FirstOrDefault() + "] with " + base2 + "% Rate Mod";
                 case 202:
                     return "Project Illusion on Next Spell";
                 case 203:
                     return "Mass Group Buff on Next Spell";
                 case 204:
+                    return "Group Fear Immunity for " + (base1[x] * 10) + "s";
                 case 205:
+                    return "AE Attack (" + value + ")";
                 case 206:
+                    return "AE Taunt and Increase Hate by " + base1[x];
                 case 207:
                     return "Turn Flesh into Bone Chips";
                 case 208:
@@ -597,6 +652,7 @@ namespace SpellParser
                 case 233:
                     return FormatPercent("Food Consumption", -value);
                 case 234:
+                    return "Decrease Poison Application Time by " + (10 - (base1[x] / 1000)) + "s";
                 case 237:
                     return "Enable Pet Ability: Receive Group Buffs";
                 case 238:
@@ -617,7 +673,9 @@ namespace SpellParser
                 case 254:
                     return "";
                 case 255:
+                    return "Increase Shielding Duration by " + base1[x];
                 case 256:
+                    return "Shroud of Stealth (" + base1[x] + ")";
                 case 257:
                     return "Enable Pet Ability: Hold";
                 case 258:
@@ -676,7 +734,9 @@ namespace SpellParser
                 case 309:
                     return "Teleport to Caster's Bind";
                 case 310:
+                    return (base1[x] < 0 ? "Increase" : "Reduce") + " Timer by " + Math.Abs(base1[x] / 1000) + "s";
                 case 311:
+                    return "Limit Type: " + (base1[x] == 1 ? "Include" : "Exclude") + " Combat Skills";
                 case 312:
                     return "Sanctuary";
                 case 313:
@@ -709,8 +769,11 @@ namespace SpellParser
                 case 338:
                     return "Summon and Resurrect All Corpses";
                 case 339:
+                    return "Cast on Spell Use: [Spell " + base2 + "|" + Globals.spellBaseData.Where(c => c.ID == base2).Select(c => c.Name).FirstOrDefault() + "] (" + base1[x] + "% Chance)";
                 case 340:
+                    return (base1[x] < 100 ? base1[x] + "% Chance to " : "") + "Cast [Spell " + base2 + "|" + Globals.spellBaseData.Where(c => c.ID == base2).Select(c => c.Name).FirstOrDefault() + "] (v340)";
                 case 341:
+                    return FormatCount("Attack Cap", base1[x]);
                 case 342:
                     return "Prevent NPC from Running at Low Health";
                 case 343:
@@ -755,8 +818,11 @@ namespace SpellParser
                 case 384:
                     return "Fling to Target";
                 case 385:
+                    return "Limit Spells: " + (base1[x] >= 0 ? "" : "Exclude ") + "[Group " + base1[x] + " | " + Globals.spellBaseData.Where(c => c.GroupID == base1[x]).OrderBy(c => c.ID).Select(c => c.Name).FirstOrDefault() + "]";
                 case 386:
+                    return "Cast on Curer: [Spell " + base1[x] + "|" + Globals.spellBaseData.Where(c => c.ID == base1[x]).Select(c => c.Name).FirstOrDefault() + "]";
                 case 387:
+                    return "Cast if Cured: [Spell " + base1[x] + "|" + Globals.spellBaseData.Where(c => c.ID == base1[x]).Select(c => c.Name).FirstOrDefault() + "]";
                 case 388:
                     return "Summon All Corpses (From Any Zone)";
                 case 389:
@@ -791,7 +857,9 @@ namespace SpellParser
                 case 416:
                     return FormatCountRange("Armor Class", value, (double)Math.Round((decimal)(Math.Abs(value / 4) * 0.265), 0, MidpointRounding.AwayFromZero), (double)Math.Round((decimal)(Math.Abs(value / 4) * 0.35), 0, MidpointRounding.AwayFromZero)) + ", Based on Class (v416)";
                 case 417:
+                    return FormatCount("Current Mana", value) + repeating + range + " (v417)";
                 case 418:
+                    return FormatCount(SpellSkill(base2) + " Damage Bonus", base1[x]) + " (v418)";
                 case 419:
                     return "Add Melee Proc: [Spell " + base1[x] + "|" + Globals.spellBaseData.Where(c => c.ID == base1[x]).Select(c => c.Name).FirstOrDefault() + "]" + (base2 != 0 ? " with " + base2 + "% Rate Mod" : "");
                 case 420:
@@ -870,9 +938,9 @@ namespace SpellParser
                 case 478:
                     return "Set to Bottom of NPC Rampage List (" + base1[x] + "% Chance)";
                 case 479:
-                    return "Limit " + (base1[x] < 0 ? "Max" : "Min") + " Value: " + Math.Abs(base1[x]) + " (" + SpellEffects(base2) + " [SPA " + base2 + "])";
+                    return "Limit " + (base1[x] < 0 ? "Max" : "Min") + " Value: " + Math.Abs(base1[x]) + " (" + SpellEffect(base2) + " [SPA " + base2 + "])";
                 case 480:
-                    return "Limit " + (base1[x] < 0 ? "Min" : "Max") + " Value: " + Math.Abs(base1[x]) + " (" + SpellEffects(base2) + " [SPA " + base2 + "])";
+                    return "Limit " + (base1[x] < 0 ? "Min" : "Max") + " Value: " + Math.Abs(base1[x]) + " (" + SpellEffect(base2) + " [SPA " + base2 + "])";
                 case 481:
                     return "Cast: [Spell " + base2 + "|" + Globals.spellBaseData.Where(c => c.ID == base2).Select(c => c.Name).FirstOrDefault() + "] if Hit by Spell and Conditions are Met" + (base1[x] < 100 ? " (" + base1[x] + "% Chance)" : "");
                 case 482:
